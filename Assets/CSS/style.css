@@ -1,11 +1,14 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing : border-box;/*used to screen align 100%width elements with padding/margins*/
+
   }
-  
+
 body {
     font-family: Helvetica, Arial, sans-serif;
     color : #39a6b2;
+    padding : 20px 30px;
     
   }
 
@@ -40,4 +43,77 @@ header nav ul li {
     margin : 0 30px;
     font-weight : lighter;
     font-size : 22px;
+}
+
+footer {
+    background : #fce138;
+    width : 100%;
+    padding : 20px 30px;
+    
+}
+
+footer h2 {
+    display : inline;
+    color : #024e76;
+    font-size : 30px;
+}
+
+footer div {
+    float : right;
+    
+}
+
+section {
+    padding : 60px;
+}
+.hero {
+    
+    height : 600px;
+    background-image : url("../images/hero-bg.jpg");/*must go to projects folder to go back down images folder*/
+    background-size :cover;
+    background-position :center;
+    position :relative;
+}
+
+.heroform {
+    background-color : #fce138;
+    padding : 20px;
+    width : 500px;
+    color : #024e76;
+    border : solid 3px #024e76;
+    position : absolute;
+    bottom : 120px;
+    right : 140px;
+}
+
+.heroform h3{
+    font-size : 24px;
+    margin : 0;
+}
+
+.heroform p {
+    margin : 5px 0 15px 0;
+}
+
+.forminput {
+    border : 1px solid #024e76;
+    display : block;
+    padding : 7px 15px;
+    font-size : 16px;
+    color : #024e76;
+    width : 100%;
+    margin-bottom : 15px;
+}
+
+.heroform label {
+    margin : 0 5px;
+}
+
+.heroform button {
+    color : #fce138;
+    background-color : #024e76;
+    border : none;
+    padding : 10px 20px;
+    font-size : 16px;
+
 }
