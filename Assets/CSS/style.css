@@ -59,7 +59,7 @@ footer h2 {
 }
 
 footer div {
-    float : right;
+    float : right;/*runs inline with other cleared element, on the right side*/
     
 }
 
