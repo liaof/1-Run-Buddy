@@ -75,6 +75,13 @@ section {
     position :relative;
 }
 
+.herosecondary {
+    background-position : bottom;
+    height : auto;
+    text-align : center;
+    margin-bottom : 40px;
+}
+
 .heroform {
     background-color : #fce138;
     padding : 20px;
@@ -287,4 +294,11 @@ section {
   
   .contactinfo a {
     color: #fce138;
+  }
+
+  .secondarycontent {
+      width : 80%;
+      margin : auto;
+      color : #024e76;
+      
   }
