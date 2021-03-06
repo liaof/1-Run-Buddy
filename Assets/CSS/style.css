@@ -3,14 +3,14 @@
     padding: 0;
     box-sizing : border-box;/*used to screen align 100%width elements with padding/margins*/
 
-  }
+}
 
 body {
     font-family: Helvetica, Arial, sans-serif;
     color : #39a6b2;
     padding : 20px 30px;
     
-  }
+}
 
 header {
     padding : 20px 35px;
@@ -45,7 +45,7 @@ header nav ul {
 }
 
 header nav ul li a{
-    margin : 0 30px;
+    padding: 10px 15px;
     font-weight : lighter;
     font-size : 1.5vw;
 }
@@ -81,6 +81,7 @@ section {
     display : flex;
     justify-content :center;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .hero-cta {
@@ -88,8 +89,8 @@ section {
     text-align : right;
     margin :3.5%;
     color : #fff;
-    font-size : 18pc;
-    line-height: 1.3;
+    font-size : 18px;
+    line-height: 1.2;
 }
 
 .hero-cta h2 {
@@ -142,7 +143,6 @@ section {
     border : none;
     padding : 10px 20px;
     font-size : 16px;
-
 }
 
 /*.intro h2 {
@@ -167,6 +167,34 @@ section {
     text-align : center;
 }
 
+/*.steps h2 {
+    font-size : 55px;
+    color: #024e76;
+    margin-bottom: 35px;
+    padding: 0 100px 20px 100px;
+    border-bottom: 3px solid;
+    border-color: #39a6b2;
+    display : inline-block;
+}*/
+
+.section-title {
+    font-size: 48px;
+    color: #024e76;
+    border-bottom: 3px solid;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    width: 50%;
+}
+  
+.primary-border {
+    border-color: #fce138;
+}
+
+.secondary-border {
+    border-color: #39a6b2;
+}
+
 .steps {
     background : #fce138;
     
@@ -182,41 +210,10 @@ section {
     align-items: center;
     justify-content: space-between;
 }
-
-/*.steps h2 {
-    font-size : 55px;
-    color: #024e76;
-    margin-bottom: 35px;
-    padding: 0 100px 20px 100px;
-    border-bottom: 3px solid;
-    border-color: #39a6b2;
-    display : inline-block;
-}*/
-
-.section-title {
-    font-size: 55px;
-    color: #024e76;
-    border-bottom: 3px solid;
-    padding-bottom: 20px;
-    text-align: center;
-    margin: 0 auto 35px auto;
-    width: 50%;
-  }
-  
-.primary-border {
-    border-color: #fce138;
-}
-
-.secondary-border {
-    border-color: #39a6b2;
-}
-  
 .step h3 {
     color: #024e76;
     font-size: 46px;
-    margin-top: 10px;
     flex : 1 30%;
-    
 }
 
 .step-info {
@@ -267,7 +264,7 @@ section {
 
 .trainer img {
     width: 100%;
-  }
+}
   
 .trainer-bio {
     padding: 25px;
@@ -302,23 +299,27 @@ section {
 
 .contact {
     background: #024e76;
+    
   }
 
 .contact h2 {
     color: #fce138;
 }
 
-/*applies properties to all .contact-info even if they don't share a class or name*/
+/*applies properties to all .contact-info elements even if they don't share a class or name*/
 .contact-info > *{
     flex: 1;
     margin: 15px;
 }
 
+.contact-info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 .contact-info iframe {
     height: 400px;
 }
-
-
 
 .contact-info div {
     color : white;
@@ -343,8 +344,8 @@ section {
     color: #fce138;
 }
 
-.contact-form input, .contact_form textarea {
-    border: 1px aolid #024e76;
+.contact-form input, .contact-form textarea {
+    border: 1px solid #024e76;
     display: block;
     padding: 7px 15px;
     font-size: 16px;
@@ -364,9 +365,122 @@ section {
     font-size: 16px;
 }
 
-
 .secondarycontent {
     width : 80%;
     margin : auto;
     color : #024e76;
+}
+
+/*media query for smaller desktop screens and smaller */
+/*queries are placed in decending order when using max-width, vice versa for min-width*/
+@media screen and (max-width: 980px){
+
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+
+    footer h2, footer div {
+        text-align: center;
+        width: 100%;
+    }
+    /*.hero {
+        flex-direction : column;
+    }*/
+    .section-title {
+        width:80%;
+    }
+
+    .hero-cta, .heroform {
+        width: 100%;
+        
+    }
+
+    .hero-cta {
+        text-align: center;
+    }
+
+    .trainer {
+        flex : 0 70%;
+    }
+
+    .contact-info iframe{
+        flex: 1 100%;
+    }
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+/*max size following rules apply to is 768px*/
+@media screen and (max-width: 768px) {
+
+    section {
+        padding : 30px 15px;
+    }
+    .step h3 {
+        flex: 1 100%;
+        text-align: center;
+    }
+
+    .step-text {
+        flex: 100%;
+    }
+    
+    .step-info{
+        flex : 2 100%;
+        text-align: center;
+        justify-content: center;
+    } 
+
+    .step-img {
+        flex : 0 30%;
+    }
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+/*max size following rules apply to is 575px*/
+@media screen and (max-width: 575px) {
+    
+    .hero-form button {
+        width: 100%;
+    }
+
+    .section-title {
+        width: 95%;
+    }
+
+    intro p {
+        width: 100%;
+    }
+
+    .trainer {
+        flex: 0 100%;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-info > *{
+        flex : 0 100%;
+    }
+
+    .contact-form {
+        order: 3;
+    }
+    
 }
